@@ -1,0 +1,38 @@
+.heading{
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #ed1313;
+}
+
+.btn{
+  text-align: center;
+  position: static;
+  margin: 0 auto;
+  width: 18%;
+  height: 10%;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  /* color: #ed1313; */
+  border: 2px solid #ed1313;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover{
+background-color: #ed1313;
+color: #fff;
+}
+
+.recordItem{
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #ef3eba;
+  margin: 0 auto;
+  width: 80%;
+  height: 10%;
+  background-color: #fff;
+  cursor: pointer;
+}

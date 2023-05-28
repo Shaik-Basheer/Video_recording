@@ -1,0 +1,21 @@
+
+<div>
+  <h2 class="heading">Video Upload</h2>
+  <div>
+    <p class="recordItem">Recording Status: {{ recording ? '🔴 Recording' : 'Not Recording' }}</p>
+  </div>
+  <video #videoElement></video><br>
+  <button class="btn" (click)="toggleRecording()" [disabled]="recording">Record</button>
+  <button class="btn" (click)="switchCamera()" [disabled]="!recording || !dualCameraSupported">Switch Camera</button>
+  <button class="btn" (click)="stopRecording()" [disabled]="!recording">Stop Recording</button>
+  <button class="btn" (click)="uploadVideo()" [disabled]="!videoData || videoDuration < 30">Upload</button>
+  <div *ngIf="videoDuration < 30">
+    <p style="color: red;">Minimum video duration should be 30 seconds.</p>
+  </div>
+  <div *ngIf="uploadProgress !== null">
+    <p>Upload Progress: {{ uploadProgress }}%</p>
+  </div>
+  <div *ngIf="uploadError">
+    <p>{{ uploadError }}</p>
+  </div>
+</div>
